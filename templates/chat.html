@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会议系统</title>
+    <link rel="stylesheet" href="/static/chat.css">
+</head>
+<body>
+    <!-- 新建会议界面 -->
+    <div id="create-meeting-container" class="container">
+        <h2>新建会议</h2>
+        <div class="input-group">
+            <input type="text" id="meeting-name" placeholder="输入会议名称">
+        </div>
+        <div class="input-group">
+            <input type="text" id="create-member-name" placeholder="输入成员名称">
+        </div>
+        <div class="button-group">
+            <button id="create-button" class="btn btn-primary">New</button>
+        </div>
+    </div>
+
+    <!-- 加入会议界面 -->
+    <div id="join-meeting-container" class="container" style="display: none;">
+        <h2 id="join-meeting-name"></h2>
+        <div class="input-group">
+            <input type="text" id="join-member-name" placeholder="输入成员名称">
+        </div>
+        <div class="button-group">
+            <button id="join-button" class="btn btn-primary">Join</button>
+        </div>
+    </div>
+
+    <!-- 会议交互界面 -->
+    <div id="chat-container" class="container" style="display: none;">
+        <div class="header">
+            <button id="leave-button" class="btn btn-danger">Leave</button>
+            <h2 id="meeting-title"></h2>
+        </div>
+        <div class="content">
+            <div class="members-panel">
+                <h3>成员列表</h3>
+                <ul id="members-list"></ul>
+            </div>
+            <div class="chat-panel">
+                <div id="messages-container"></div>
+                <div class="input-area">
+                    <input type="text" id="message-input" placeholder="输入消息...">
+                    <button id="send-button" class="btn btn-primary">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>
